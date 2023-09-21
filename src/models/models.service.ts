@@ -143,7 +143,7 @@ export class ModelsService {
             this.logger.error('syncModels', e);
         }
 
-        setTimeout(this.syncModels, 1000);
+        setTimeout(this.syncModels, this.syncStorageModelsInterval);
     }
 
     getModels = (): IModel[] => {
